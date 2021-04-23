@@ -17,10 +17,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
-.env
 .vscode
 custom
 src/client
+my old projects/client
 
 npm-debug.log*
 yarn-debug.log*
