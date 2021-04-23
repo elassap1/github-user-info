@@ -11,7 +11,6 @@ const Links = styled(Link)`
   height: ${props=> `${props.size[1]}rem`};
   font-size: ${props=> `${props.size[0]*0.2}rem`};
   border-radius: 5px;
-  padding: .5rem;
   transition: all ease-in-out .5s;
   cursor: pointer;
   text-align: center;
@@ -30,7 +29,7 @@ const Links = styled(Link)`
 const Anchor = ({clr, bg, b_clr, size=1,children, go='', padding}) => {
 
   return (
-    <Links  to={go} clr={clr} bg={bg} b_clr={b_clr} size={size} padd={padding}>
+    <Links  to={go} clr={clr} bg={bg} b_clr={b_clr} size={size} padding={padding}>
       {children}
     </Links>
   )

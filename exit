@@ -1,0 +1,99 @@
+
+                   SSUUMMMMAARRYY OOFF LLEESSSS CCOOMMMMAANNDDSS
+
+      Commands marked with * may be preceded by a number, _N.
+      Notes in parentheses indicate the behavior if _N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MMOOVVIINNGG
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or _N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or _N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or _N lines).
+  b  ^B  ESC-v      *  Backward one window (or _N lines).
+  z                 *  Forward  one window (and set window to _N).
+  w                 *  Backward one window (and set window to _N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to _N).
+  u  ^U             *  Backward one half-window (and set half-window to _N).
+  ESC-)  RightArrow *  Right one half screen width (or _N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or _N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SSEEAARRCCHHIINNGG
+
+  /_p_a_t_t_e_r_n          *  Search forward for (_N-th) matching line.
+  ?_p_a_t_t_e_r_n          *  Search backward for (_N-th) matching line.
+  n                 *  Repeat previous search (for _N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &_p_a_t_t_e_r_n          *  Display only matching lines
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+[33mcommit 75011cf002cc07f23ae231d44b69cd213448c277[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: 18f6822 d277758
+Author: irassari <elassari19@gmail.com>
+Date:   Thu Apr 22 23:08:09 2021 +0000
+
+    Merge branch 'master' of github.com:elassap1/github-user-info
+
+[33mcommit 18f68226ae2a7a696769793fe3fbcfe7daa66bf3[m
+Author: irassari <elassari19@gmail.com>
+Date:   Thu Apr 22 23:01:32 2021 +0000
+
+    remove all
+
+[33mcommit a41d41aa932acdac0e4528c7438246f2633ca3dc[m
+Author: irassari <elassari19@gmail.com>
+Date:   Thu Apr 22 22:53:17 2021 +0000
+
+    fix some error
+
+[33mcommit d277758a7ca563f27f8b5a4a78a604876fd66848[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: elassap1 <elassari19@gmail.com>
+Date:   Thu Apr 22 18:48:42 2021 +0000
+
+    Delete .gitignore
+
+[33mcommit 7619dc8f091ce0dd911ddcdd4f6fa67d6ee5058b[m
+Author: elassap1 <elassari19@gmail.com>
+Date:   Thu Apr 22 18:48:22 2021 +0000
+
+    Delete .vscode directory
+
+[33mcommit 92b3e5fcf8dd24077a4eda9131886d2504c61048[m
+Author: elassap1 <elassari19@gmail.com>
+Date:   Thu Apr 22 18:48:12 2021 +0000
+
+    Delete .env
+
+[33mcommit 765bdd912bf5a321e9047a6fc954553c7dd4025c[m
+Author: irassari <elassari19@gmail.com>
+Date:   Thu Apr 22 18:46:22 2021 +0000
+
+    edit
+
+[33mcommit c98845b7f58b8ca5f13e6a24868d798c427874fb[m
+Author: irassari <elassari19@gmail.com>
+Date:   Thu Apr 22 18:40:13 2021 +0000
+
+    github user info
