@@ -1,24 +1,23 @@
-import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
 import styled from 'styled-components';
 import Anchor from '../matirial/Anchor';
-// import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const NavLogin = () => {
 
-  let {logout, user} = useAuth0();
-  const email = 'https://mail.google.com/';
-console.log(user)
+  const {user, logout } = useAuth0();
+  const email = 'https://mail.google.com/'
+
   return (
     <Div>
       <Gmail>
-        <Anchor href={email}>
-          <img src={user.name} alt={user.name} />
-        </Anchor>
+        <a href={email}>
+          <img src={user.picture} alt={user.name}/>
+        </a>
       </Gmail>
       <Heading>Wellcome,</Heading>
-      <h3></h3>
-      <span onClick={()=>logout()}>
+      <h3>{user.nickname}</h3>
+      <span onClick={()=>logout({ returnTo: window.location.origin })}>
       <Anchor clr='gray' b_clr='none'>Logout</Anchor>
       </span>
       
