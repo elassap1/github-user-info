@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { gitContext } from '../../context/Context';
 import Anchor from '../matirial/Anchor';
-import { useAuth0 } from "@auth0/auth0-react";
 
 const NavLogin = () => {
 
-  const {user, logout } = useAuth0();
-  const email = 'https://mail.google.com/'
+  let {setLogin} = useContext(gitContext);
+  const email = 'https://mail.google.com/';
 
   return (
     <Div>
-      <Gmail>
-        <a href={email}>
-          <img src={user.picture} alt={user.name}/>
-        </a>
-      </Gmail>
+      <div>
+        <Anchor clr='green' b_clr='none' size={[8,1]} href={email}>
+          @
+        </Anchor>
+      </div>
       <Heading>Wellcome,</Heading>
-      <h3>{user.nickname}</h3>
-      <span onClick={()=>logout({ returnTo: window.location.origin })}>
-      <Anchor clr='gray' b_clr='none'>Logout</Anchor>
+      <h3>Guest</h3>
+      <span onClick={()=>setLogin(true)}>
+        <Anchor clr='gray' b_clr='none' size={[6,.5]}>Logout</Anchor>
       </span>
       
     </Div>
@@ -26,13 +26,6 @@ const NavLogin = () => {
 }
 
 export default NavLogin
-
-const Gmail = styled.div`
- img{
-   width: 40px;
-   border-radius: 40%40%;
- }
-`
 
 const Heading = styled.h3`
   color: gray;
@@ -46,7 +39,7 @@ const Div = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 10px 35%;
+  padding: 10px 30%;
   background: #fff;
   @media (max-width: 850px){
     padding: 10px 15%;
