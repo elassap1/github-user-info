@@ -1,5 +1,4 @@
-import { useAuth0 } from '@auth0/auth0-react';
-import React from 'react';
+import React, {useState} from 'react';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 
 import { gitContext } from './context/Context';
@@ -9,13 +8,16 @@ import Login from './pages/login/Login';
 
 const Index = () => {
 
-  let {isAuthenticated} = useAuth0();
-console.log(isAuthenticated)
+  let [isLogin, setIsLogin] = useState(false);
+  const handleLogin = () => {
+    setIsLogin(!isLogin)
+  }
+console.log(isLogin)
   return (
-    <gitContext.Provider value={{}}>
+    <gitContext.Provider value={{isLogin, handleLogin}}>
       <Router>
         <Switch>
-          <Route path='/' exact component={isAuthenticated?Home:Login} />
+          <Route path='/' exact component={isLogin?Home:Login} />
           <Route path='*' component={Error}/>
         </Switch>
       </Router>

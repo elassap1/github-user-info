@@ -57,7 +57,7 @@ const Home = () => {
           <Charting />
         </>
 
-        :<div>No request</div>
+        :<Div style={{fontSize: '2rem', color: 'white'}}>No github user request</Div>
       }
       </gitContext.Provider>
     </div>
@@ -70,7 +70,7 @@ let Div = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-width: 100% !important;
+width: 90% !important;
 margin: 10vh 0;
 >*{
   margin: 10px
